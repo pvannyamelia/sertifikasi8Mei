@@ -7,9 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB099C6728279A240083B596 /* AdminProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB099C6628279A240083B596 /* AdminProductsViewController.swift */; };
+		CB099C6928279A520083B596 /* CustomerCatalogueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB099C6828279A520083B596 /* CustomerCatalogueViewController.swift */; };
+		CB099C6B2827A32C0083B596 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB099C6A2827A32C0083B596 /* Product.swift */; };
+		CB099C6D2827A5BD0083B596 /* Product_Ctg.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB099C6C2827A5BD0083B596 /* Product_Ctg.swift */; };
+		CB099C6F2827A5E90083B596 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB099C6E2827A5E90083B596 /* Transaction.swift */; };
+		CB099C712827A6340083B596 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB099C702827A6340083B596 /* Customer.swift */; };
+		CB099C742827A6CA0083B596 /* ProductAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB099C732827A6CA0083B596 /* ProductAPI.swift */; };
+		CB099C762827A9C60083B596 /* TransactionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB099C752827A9C60083B596 /* TransactionAPI.swift */; };
+		CB099C782827AAB20083B596 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB099C772827AAB20083B596 /* LoginAPI.swift */; };
+		CB099C7A2827ABD40083B596 /* AdminTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB099C792827ABD40083B596 /* AdminTransactionViewController.swift */; };
+		CB099C7C2827AC290083B596 /* CustomerOnGoingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB099C7B2827AC290083B596 /* CustomerOnGoingViewController.swift */; };
 		CB8538B3282744460039F650 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8538B2282744460039F650 /* AppDelegate.swift */; };
 		CB8538B5282744460039F650 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8538B4282744460039F650 /* SceneDelegate.swift */; };
-		CB8538B7282744460039F650 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8538B6282744460039F650 /* ViewController.swift */; };
+		CB8538B7282744460039F650 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8538B6282744460039F650 /* LoginViewController.swift */; };
 		CB8538BA282744460039F650 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8538B8282744460039F650 /* Main.storyboard */; };
 		CB8538BD282744460039F650 /* SertifikasiLibrary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB8538BB282744460039F650 /* SertifikasiLibrary.xcdatamodeld */; };
 		CB8538BF2827444A0039F650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8538BE2827444A0039F650 /* Assets.xcassets */; };
@@ -39,10 +50,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB099C6628279A240083B596 /* AdminProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProductsViewController.swift; sourceTree = "<group>"; };
+		CB099C6828279A520083B596 /* CustomerCatalogueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerCatalogueViewController.swift; sourceTree = "<group>"; };
+		CB099C6A2827A32C0083B596 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		CB099C6C2827A5BD0083B596 /* Product_Ctg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product_Ctg.swift; sourceTree = "<group>"; };
+		CB099C6E2827A5E90083B596 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		CB099C702827A6340083B596 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		CB099C732827A6CA0083B596 /* ProductAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductAPI.swift; sourceTree = "<group>"; };
+		CB099C752827A9C60083B596 /* TransactionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionAPI.swift; sourceTree = "<group>"; };
+		CB099C772827AAB20083B596 /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
+		CB099C792827ABD40083B596 /* AdminTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTransactionViewController.swift; sourceTree = "<group>"; };
+		CB099C7B2827AC290083B596 /* CustomerOnGoingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerOnGoingViewController.swift; sourceTree = "<group>"; };
 		CB8538AF282744460039F650 /* SertifikasiLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SertifikasiLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8538B2282744460039F650 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB8538B4282744460039F650 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CB8538B6282744460039F650 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CB8538B6282744460039F650 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CB8538B9282744460039F650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB8538BC282744460039F650 /* SertifikasiLibrary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SertifikasiLibrary.xcdatamodel; sourceTree = "<group>"; };
 		CB8538BE2827444A0039F650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +104,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB099C65282798B70083B596 /* ProductImage */ = {
+			isa = PBXGroup;
+			children = (
+				CBB2D67A282753AF00962A04 /* ProductImage+CoreDataClass.swift */,
+				CBB2D67B282753AF00962A04 /* ProductImage+CoreDataProperties.swift */,
+			);
+			path = ProductImage;
+			sourceTree = "<group>";
+		};
+		CB099C722827A69B0083B596 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CB099C732827A6CA0083B596 /* ProductAPI.swift */,
+				CB099C752827A9C60083B596 /* TransactionAPI.swift */,
+				CB099C772827AAB20083B596 /* LoginAPI.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		CB8538A6282744460039F650 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +146,7 @@
 		CB8538B1282744460039F650 /* SertifikasiLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				CB099C722827A69B0083B596 /* Services */,
 				CB8538B2282744460039F650 /* AppDelegate.swift */,
 				CB8538B4282744460039F650 /* SceneDelegate.swift */,
 				CB8538E72827494F0039F650 /* Model */,
@@ -145,7 +187,11 @@
 		CB8538E6282749390039F650 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CB8538B6282744460039F650 /* ViewController.swift */,
+				CB8538B6282744460039F650 /* LoginViewController.swift */,
+				CB099C6628279A240083B596 /* AdminProductsViewController.swift */,
+				CB099C6828279A520083B596 /* CustomerCatalogueViewController.swift */,
+				CB099C792827ABD40083B596 /* AdminTransactionViewController.swift */,
+				CB099C7B2827AC290083B596 /* CustomerOnGoingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -153,9 +199,12 @@
 		CB8538E72827494F0039F650 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CBB2D67A282753AF00962A04 /* ProductImage+CoreDataClass.swift */,
-				CBB2D67B282753AF00962A04 /* ProductImage+CoreDataProperties.swift */,
+				CB099C65282798B70083B596 /* ProductImage */,
 				CB8538BB282744460039F650 /* SertifikasiLibrary.xcdatamodeld */,
+				CB099C6A2827A32C0083B596 /* Product.swift */,
+				CB099C6E2827A5E90083B596 /* Transaction.swift */,
+				CB099C702827A6340083B596 /* Customer.swift */,
+				CB099C6C2827A5BD0083B596 /* Product_Ctg.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,12 +340,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB8538B7282744460039F650 /* ViewController.swift in Sources */,
+				CB099C6F2827A5E90083B596 /* Transaction.swift in Sources */,
+				CB8538B7282744460039F650 /* LoginViewController.swift in Sources */,
 				CBB2D67D282753AF00962A04 /* ProductImage+CoreDataProperties.swift in Sources */,
+				CB099C742827A6CA0083B596 /* ProductAPI.swift in Sources */,
+				CB099C6D2827A5BD0083B596 /* Product_Ctg.swift in Sources */,
+				CB099C6B2827A32C0083B596 /* Product.swift in Sources */,
+				CB099C6928279A520083B596 /* CustomerCatalogueViewController.swift in Sources */,
+				CB099C782827AAB20083B596 /* LoginAPI.swift in Sources */,
 				CBB2D67C282753AF00962A04 /* ProductImage+CoreDataClass.swift in Sources */,
 				CB8538B3282744460039F650 /* AppDelegate.swift in Sources */,
+				CB099C7C2827AC290083B596 /* CustomerOnGoingViewController.swift in Sources */,
+				CB099C712827A6340083B596 /* Customer.swift in Sources */,
+				CB099C6728279A240083B596 /* AdminProductsViewController.swift in Sources */,
 				CB8538BD282744460039F650 /* SertifikasiLibrary.xcdatamodeld in Sources */,
+				CB099C7A2827ABD40083B596 /* AdminTransactionViewController.swift in Sources */,
 				CB8538B5282744460039F650 /* SceneDelegate.swift in Sources */,
+				CB099C762827A9C60083B596 /* TransactionAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
