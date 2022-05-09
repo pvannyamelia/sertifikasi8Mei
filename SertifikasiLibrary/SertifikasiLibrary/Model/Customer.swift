@@ -8,8 +8,8 @@
 import Foundation
 
 struct Customer: Codable {
-    let id_user: Int
+    let id_user: String
     let username: String
-    let is_admin: Int
+    let is_admin: String
     let password: String
 }

@@ -8,7 +8,10 @@
 import UIKit
 
 class CustomerCatalogueViewController: UIViewController {
-
+    @IBAction func btLogout(_ sender: Any) {
+        Logout.shared.logout(currentView: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

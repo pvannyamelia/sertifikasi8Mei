@@ -1,13 +1,13 @@
 //
-//  AdminTransactionViewController.swift
+//  EditProductViewController.swift
 //  SertifikasiLibrary
 //
-//  Created by Priscilla Vanny Amelia on 08/05/22.
+//  Created by Priscilla Vanny Amelia on 09/05/22.
 //
 
 import UIKit
 
-class AdminTransactionViewController: UIViewController {
+class EditProductViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

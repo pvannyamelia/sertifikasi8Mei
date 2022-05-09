@@ -8,8 +8,8 @@
 import Foundation
 
 struct Product: Codable {
-    let id_product: Int
-    let id_ctg: Int
-    let product_name: String
-    let available: Int
+    var id_product: String
+    var id_ctg: String
+    var product_name: String
+    var available: String
 }

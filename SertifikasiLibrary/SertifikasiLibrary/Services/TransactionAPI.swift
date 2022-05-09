@@ -7,6 +7,19 @@
 
 import Foundation
 
-class TransactionAPI {
+protocol TransactionProtocol {
+    func peminjaman()
+    func pengembalian()
+}
+
+class TransactionAPI: TransactionProtocol {
+    func peminjaman() {
+        
+    }
+    
+    func pengembalian() {
+        
+    }
+    
     
 }

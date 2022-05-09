@@ -8,9 +8,9 @@
 import Foundation
 
 struct Transaction: Codable {
-    let id_transaction: Int
-    let id_product: Int
-    let id_user: Int
+    let id_transaction: String
+    let id_product: String
+    let id_user: String
     let borrow_date: String
     let deadline: String
     let return_date: String

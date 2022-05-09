@@ -8,18 +8,47 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
-    @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var usernameTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var lbError: UILabel!
     
     @IBAction func loginButton(_ sender: Any) {
-        let productAPI = ProductAPI(productID: 1, productCtgID: 1)
-        productAPI.getAllProduct()
+        let username = usernameTF.text ?? ""
+        let password = passwordTF.text ?? ""
+
+        if (!(username.isEmpty || password.isEmpty)) {
+            let loginAPI = LoginAPI(username: username, password: password)
+            loginAPI.login {
+                let main = UIStoryboard(name: "Main", bundle: nil)
+                if (loginAPI.status && loginAPI.isAdmin) {
+                    // user adalah admin
+                    DispatchQueue.main.async {
+                        let nextVC = main.instantiateViewController(withIdentifier: "adminTabBar") as UIViewController
+                        nextVC.modalPresentationStyle = .fullScreen
+                        self.present(nextVC, animated: true) {
+                            self.lbError.text = ""
+                        }
+                    }
+                } else if (loginAPI.status && !loginAPI.isAdmin) {
+                    // user bukan admin
+                    DispatchQueue.main.async {
+                        let nextVC = main.instantiateViewController(withIdentifier: "customerCatalogue") as UIViewController
+                        nextVC.modalPresentationStyle = .fullScreen
+                        self.present(nextVC, animated: true) {
+                            self.lbError.text = ""
+                        }
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.lbError.text = loginAPI.message
+                    }
+                }
+            }
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
 

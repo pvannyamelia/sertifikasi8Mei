@@ -8,6 +8,6 @@
 import Foundation
 
 struct Product_Ctg: Codable {
-    let id_ctg: Int
+    let id_ctg: String
     let ctg_name: String
 }

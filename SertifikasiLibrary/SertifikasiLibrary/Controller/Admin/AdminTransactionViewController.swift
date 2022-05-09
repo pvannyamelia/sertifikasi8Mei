@@ -1,5 +1,5 @@
 //
-//  AdminHomeViewController.swift
+//  AdminTransactionViewController.swift
 //  SertifikasiLibrary
 //
 //  Created by Priscilla Vanny Amelia on 08/05/22.
@@ -7,8 +7,12 @@
 
 import UIKit
 
-class AdminProductsViewController: UIViewController {
+class AdminTransactionViewController: UIViewController {
 
+    @IBAction func btLogout(_ sender: Any) {
+        Logout.shared.logout(currentView: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
