@@ -11,9 +11,9 @@ import CryptoKit
 class LoginAPI: APIProtocol {
     let username: String
     let password: String
-    var isAdmin: Bool = false
-    var status: Bool = false
-    var message: String = ""
+    var isAdmin: Bool?
+    var status: Bool?
+    var message: String?
     
     init (username: String, password: String) {
         self.username = username
@@ -21,25 +21,14 @@ class LoginAPI: APIProtocol {
     }
     
     func login(completion: @escaping ()->()) {
-        guard let url = URL(string: "http://localhost:8888/SertifikasiLibraryAPI/service/Login/login.php") else {
-            return
-        }
-        var request = URLRequest(url: url)
-        
-        // add method & body
-        request.httpMethod = "POST"
         let postString = "username=\(self.username)&password=\(self.password)"
-        request.httpBody = postString.data(using: String.Encoding.utf8)
+        let request = APIRequest.shared.postRequest(urlString: "http://localhost:8888/SertifikasiLibraryAPI/service/Login/login.php", postString: postString)
         
         // hit request
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        let task = URLSession.shared.dataTask(with: request!) { data, response, error in
             guard let data = data, error == nil else {
                 return
             }
-            
-//            if let data = data, let dataString = String(data: data, encoding: .utf8) {
-//                print(dataString)
-//            }
             
             self.parseJSON(data: data)
             completion()

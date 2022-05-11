@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
             let loginAPI = LoginAPI(username: username, password: password)
             loginAPI.login {
                 let main = UIStoryboard(name: "Main", bundle: nil)
-                if (loginAPI.status && loginAPI.isAdmin) {
+                if ((loginAPI.status ?? false) && (loginAPI.isAdmin ?? false)) {
                     // user adalah admin
                     DispatchQueue.main.async {
                         let nextVC = main.instantiateViewController(withIdentifier: "adminTabBar") as UIViewController
@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
                             self.lbError.text = ""
                         }
                     }
-                } else if (loginAPI.status && !loginAPI.isAdmin) {
+                } else if ((loginAPI.status ?? false) && !(loginAPI.isAdmin ?? true)) {
                     // user bukan admin
                     DispatchQueue.main.async {
                         let nextVC = main.instantiateViewController(withIdentifier: "customerCatalogue") as UIViewController

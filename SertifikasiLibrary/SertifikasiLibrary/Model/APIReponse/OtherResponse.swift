@@ -12,3 +12,14 @@ struct Login: Codable {
     let message: String
     let is_admin: String
 }
+
+struct NewProduct: Codable {
+    let status: String
+    let message: String
+    let product_id: Int
+}
+
+struct DefaultResponse: Codable {
+    let status: String
+    let message: String
+}

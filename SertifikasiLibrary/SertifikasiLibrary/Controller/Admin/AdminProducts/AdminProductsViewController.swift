@@ -8,7 +8,7 @@
 import UIKit
 
 class AdminProductsViewController: UIViewController {
-    
+    var productID: String?
     let allProductAPI = AllProductAPI.shared
     
     @IBOutlet weak var tvProduct: UITableView!
@@ -16,8 +16,24 @@ class AdminProductsViewController: UIViewController {
         Logout.shared.logout(currentView: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "mainToEdit" && self.productID != nil) {
+            let editProductVC = segue.destination as! EditProductViewController
+            editProductVC.productID = self.productID
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.fetchData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.fetchData()
+    }
+    
+    func fetchData() {
         allProductAPI.getAllProduct(completion: {
             DispatchQueue.main.async {
                 self.tvProduct.delegate = self
@@ -28,13 +44,7 @@ class AdminProductsViewController: UIViewController {
     }
 }
 
-extension AdminProductsViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("tapped")
-    }
-}
-
-extension AdminProductsViewController: UITableViewDataSource {
+extension AdminProductsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allProductAPI.productArray.count
     }
@@ -44,5 +54,10 @@ extension AdminProductsViewController: UITableViewDataSource {
         let product = allProductAPI.productArray[indexPath.row]
         cell?.setProduct(product: product)
         return cell ?? AdminProductsTableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.productID = allProductAPI.productArray[indexPath.row].id_product
+        self.performSegue(withIdentifier: "mainToEdit", sender: self)
     }
 }

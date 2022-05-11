@@ -22,9 +22,9 @@
 		CB51D2E12828DFF30049E272 /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB51D2E02828DFF30049E272 /* APIProtocol.swift */; };
 		CB51D2E32828E31E0049E272 /* NewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB51D2E22828E31E0049E272 /* NewProductViewController.swift */; };
 		CB51D2E52828ED620049E272 /* EditProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB51D2E42828ED620049E272 /* EditProductViewController.swift */; };
-		CB51D2E72828F5190049E272 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB51D2E62828F5190049E272 /* Login.swift */; };
+		CB51D2E72828F5190049E272 /* OtherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB51D2E62828F5190049E272 /* OtherResponse.swift */; };
 		CB51D2E9282907DD0049E272 /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB51D2E8282907DD0049E272 /* LogoutService.swift */; };
-		CB51D2EB282910320049E272 /* AllCategoryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB51D2EA282910320049E272 /* AllCategoryAPI.swift */; };
+		CB51D2EB282910320049E272 /* CategoryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB51D2EA282910320049E272 /* CategoryAPI.swift */; };
 		CB8538B3282744460039F650 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8538B2282744460039F650 /* AppDelegate.swift */; };
 		CB8538B5282744460039F650 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8538B4282744460039F650 /* SceneDelegate.swift */; };
 		CB8538B7282744460039F650 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8538B6282744460039F650 /* LoginViewController.swift */; };
@@ -35,8 +35,24 @@
 		CB8538CD2827444B0039F650 /* SertifikasiLibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8538CC2827444B0039F650 /* SertifikasiLibraryTests.swift */; };
 		CB8538D72827444B0039F650 /* SertifikasiLibraryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8538D62827444B0039F650 /* SertifikasiLibraryUITests.swift */; };
 		CB8538D92827444B0039F650 /* SertifikasiLibraryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8538D82827444B0039F650 /* SertifikasiLibraryUITestsLaunchTests.swift */; };
-		CBB2D67C282753AF00962A04 /* ProductImage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB2D67A282753AF00962A04 /* ProductImage+CoreDataClass.swift */; };
-		CBB2D67D282753AF00962A04 /* ProductImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB2D67B282753AF00962A04 /* ProductImage+CoreDataProperties.swift */; };
+		CBC3D31D282A03BE00655461 /* InsertProductAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC3D31C282A03BE00655461 /* InsertProductAPI.swift */; };
+		CBC3D320282A043C00655461 /* GetAllCtgAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC3D31F282A043C00655461 /* GetAllCtgAPI.swift */; };
+		CBC3D323282A058300655461 /* GetProductbyIdAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC3D322282A058300655461 /* GetProductbyIdAPI.swift */; };
+		CBC3D325282A05A100655461 /* GetAllProductAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC3D324282A05A100655461 /* GetAllProductAPI.swift */; };
+		CBC3D329282A0E3100655461 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC3D328282A0E3100655461 /* ImageService.swift */; };
+		CBC3D32C282A0FF900655461 /* ProductImage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC3D32A282A0FF900655461 /* ProductImage+CoreDataClass.swift */; };
+		CBC3D32D282A0FF900655461 /* ProductImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC3D32B282A0FF900655461 /* ProductImage+CoreDataProperties.swift */; };
+		CBC3D32F282A174300655461 /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC3D32E282A174300655461 /* ImagePickerController.swift */; };
+		CBC3D332282A1F4000655461 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC3D331282A1F4000655461 /* AlertService.swift */; };
+		CBF801A7282A305F00DCC489 /* PickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF801A6282A305F00DCC489 /* PickerController.swift */; };
+		CBF801A9282A6E5D00DCC489 /* EditProductAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF801A8282A6E5D00DCC489 /* EditProductAPI.swift */; };
+		CBF801AB282A71E900DCC489 /* DeleteProductAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF801AA282A71E900DCC489 /* DeleteProductAPI.swift */; };
+		CBF947AF282B4D8400120243 /* GetAllTransactionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF947AE282B4D8400120243 /* GetAllTransactionAPI.swift */; };
+		CBF947B2282B4DD100120243 /* PeminjamanAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF947B1282B4DD100120243 /* PeminjamanAPI.swift */; };
+		CBF947B4282B4DDC00120243 /* PengembalianAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF947B3282B4DDC00120243 /* PengembalianAPI.swift */; };
+		CBF947B6282B4EC000120243 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF947B5282B4EC000120243 /* APIRequest.swift */; };
+		CBF947BD282B5BCF00120243 /* PeminjamanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF947BC282B5BCF00120243 /* PeminjamanViewController.swift */; };
+		CBF947C0282B5C0D00120243 /* DetailTransaksiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF947BF282B5C0D00120243 /* DetailTransaksiViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,9 +88,9 @@
 		CB51D2E02828DFF30049E272 /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
 		CB51D2E22828E31E0049E272 /* NewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
 		CB51D2E42828ED620049E272 /* EditProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductViewController.swift; sourceTree = "<group>"; };
-		CB51D2E62828F5190049E272 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		CB51D2E62828F5190049E272 /* OtherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherResponse.swift; sourceTree = "<group>"; };
 		CB51D2E8282907DD0049E272 /* LogoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutService.swift; sourceTree = "<group>"; };
-		CB51D2EA282910320049E272 /* AllCategoryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCategoryAPI.swift; sourceTree = "<group>"; };
+		CB51D2EA282910320049E272 /* CategoryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryAPI.swift; sourceTree = "<group>"; };
 		CB8538AF282744460039F650 /* SertifikasiLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SertifikasiLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8538B2282744460039F650 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB8538B4282744460039F650 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,8 +105,24 @@
 		CB8538D22827444B0039F650 /* SertifikasiLibraryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SertifikasiLibraryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8538D62827444B0039F650 /* SertifikasiLibraryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SertifikasiLibraryUITests.swift; sourceTree = "<group>"; };
 		CB8538D82827444B0039F650 /* SertifikasiLibraryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SertifikasiLibraryUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		CBB2D67A282753AF00962A04 /* ProductImage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductImage+CoreDataClass.swift"; sourceTree = "<group>"; };
-		CBB2D67B282753AF00962A04 /* ProductImage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CBC3D31C282A03BE00655461 /* InsertProductAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertProductAPI.swift; sourceTree = "<group>"; };
+		CBC3D31F282A043C00655461 /* GetAllCtgAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCtgAPI.swift; sourceTree = "<group>"; };
+		CBC3D322282A058300655461 /* GetProductbyIdAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductbyIdAPI.swift; sourceTree = "<group>"; };
+		CBC3D324282A05A100655461 /* GetAllProductAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllProductAPI.swift; sourceTree = "<group>"; };
+		CBC3D328282A0E3100655461 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		CBC3D32A282A0FF900655461 /* ProductImage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductImage+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CBC3D32B282A0FF900655461 /* ProductImage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CBC3D32E282A174300655461 /* ImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
+		CBC3D331282A1F4000655461 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		CBF801A6282A305F00DCC489 /* PickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerController.swift; sourceTree = "<group>"; };
+		CBF801A8282A6E5D00DCC489 /* EditProductAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductAPI.swift; sourceTree = "<group>"; };
+		CBF801AA282A71E900DCC489 /* DeleteProductAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductAPI.swift; sourceTree = "<group>"; };
+		CBF947AE282B4D8400120243 /* GetAllTransactionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllTransactionAPI.swift; sourceTree = "<group>"; };
+		CBF947B1282B4DD100120243 /* PeminjamanAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeminjamanAPI.swift; sourceTree = "<group>"; };
+		CBF947B3282B4DDC00120243 /* PengembalianAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PengembalianAPI.swift; sourceTree = "<group>"; };
+		CBF947B5282B4EC000120243 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		CBF947BC282B5BCF00120243 /* PeminjamanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeminjamanViewController.swift; sourceTree = "<group>"; };
+		CBF947BF282B5C0D00120243 /* DetailTransaksiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTransaksiViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +157,8 @@
 				CB51D2DE2828D6170049E272 /* AdminProductsTableViewCell.swift */,
 				CB51D2E22828E31E0049E272 /* NewProductViewController.swift */,
 				CB51D2E42828ED620049E272 /* EditProductViewController.swift */,
+				CBC3D32E282A174300655461 /* ImagePickerController.swift */,
+				CBF801A6282A305F00DCC489 /* PickerController.swift */,
 			);
 			path = AdminProducts;
 			sourceTree = "<group>";
@@ -133,7 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				CB070D7F2828B7B8009BE15D /* AdminProducts */,
-				CB099C792827ABD40083B596 /* AdminTransactionViewController.swift */,
+				CBF947BE282B5BE900120243 /* AdminTransaction */,
 			);
 			path = Admin;
 			sourceTree = "<group>";
@@ -141,8 +175,8 @@
 		CB099C65282798B70083B596 /* ProductImage */ = {
 			isa = PBXGroup;
 			children = (
-				CBB2D67A282753AF00962A04 /* ProductImage+CoreDataClass.swift */,
-				CBB2D67B282753AF00962A04 /* ProductImage+CoreDataProperties.swift */,
+				CBC3D32A282A0FF900655461 /* ProductImage+CoreDataClass.swift */,
+				CBC3D32B282A0FF900655461 /* ProductImage+CoreDataProperties.swift */,
 			);
 			path = ProductImage;
 			sourceTree = "<group>";
@@ -150,13 +184,8 @@
 		CB099C722827A69B0083B596 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				CB099C732827A6CA0083B596 /* AllProductAPI.swift */,
-				CB51D2EA282910320049E272 /* AllCategoryAPI.swift */,
-				CB099C752827A9C60083B596 /* TransactionAPI.swift */,
-				CB099C772827AAB20083B596 /* LoginAPI.swift */,
-				CB070D792828B37D009BE15D /* ProductAPI.swift */,
-				CB51D2E02828DFF30049E272 /* APIProtocol.swift */,
-				CB51D2E8282907DD0049E272 /* LogoutService.swift */,
+				CBF947B8282B56F300120243 /* NonAPI */,
+				CBF947B7282B56ED00120243 /* API */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -184,9 +213,9 @@
 		CB8538B1282744460039F650 /* SertifikasiLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				CB099C722827A69B0083B596 /* Services */,
 				CB8538B2282744460039F650 /* AppDelegate.swift */,
 				CB8538B4282744460039F650 /* SceneDelegate.swift */,
+				CB099C722827A69B0083B596 /* Services */,
 				CB8538E72827494F0039F650 /* Model */,
 				CB8538E6282749390039F650 /* Controller */,
 				CB8538E5282749310039F650 /* View */,
@@ -235,15 +264,106 @@
 		CB8538E72827494F0039F650 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CBF947B9282B573200120243 /* APIReponse */,
 				CB099C65282798B70083B596 /* ProductImage */,
 				CB8538BB282744460039F650 /* SertifikasiLibrary.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CBC3D31E282A03D200655461 /* ProductAPI */ = {
+			isa = PBXGroup;
+			children = (
+				CBC3D326282A05B100655461 /* AllProductAPI */,
+				CBC3D327282A05BC00655461 /* ProductAPI */,
+			);
+			path = ProductAPI;
+			sourceTree = "<group>";
+		};
+		CBC3D321282A045700655461 /* CategoryAPI */ = {
+			isa = PBXGroup;
+			children = (
+				CB51D2EA282910320049E272 /* CategoryAPI.swift */,
+				CBC3D31F282A043C00655461 /* GetAllCtgAPI.swift */,
+			);
+			path = CategoryAPI;
+			sourceTree = "<group>";
+		};
+		CBC3D326282A05B100655461 /* AllProductAPI */ = {
+			isa = PBXGroup;
+			children = (
+				CBC3D324282A05A100655461 /* GetAllProductAPI.swift */,
+				CB099C732827A6CA0083B596 /* AllProductAPI.swift */,
+			);
+			path = AllProductAPI;
+			sourceTree = "<group>";
+		};
+		CBC3D327282A05BC00655461 /* ProductAPI */ = {
+			isa = PBXGroup;
+			children = (
+				CB070D792828B37D009BE15D /* ProductAPI.swift */,
+				CBC3D31C282A03BE00655461 /* InsertProductAPI.swift */,
+				CBC3D322282A058300655461 /* GetProductbyIdAPI.swift */,
+				CBF801AA282A71E900DCC489 /* DeleteProductAPI.swift */,
+				CBF801A8282A6E5D00DCC489 /* EditProductAPI.swift */,
+			);
+			path = ProductAPI;
+			sourceTree = "<group>";
+		};
+		CBF947B0282B4D8A00120243 /* TransactionAPI */ = {
+			isa = PBXGroup;
+			children = (
+				CB099C752827A9C60083B596 /* TransactionAPI.swift */,
+				CBF947AE282B4D8400120243 /* GetAllTransactionAPI.swift */,
+				CBF947B1282B4DD100120243 /* PeminjamanAPI.swift */,
+				CBF947B3282B4DDC00120243 /* PengembalianAPI.swift */,
+			);
+			path = TransactionAPI;
+			sourceTree = "<group>";
+		};
+		CBF947B7282B56ED00120243 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CB099C772827AAB20083B596 /* LoginAPI.swift */,
+				CB51D2E02828DFF30049E272 /* APIProtocol.swift */,
+				CBF947B5282B4EC000120243 /* APIRequest.swift */,
+				CBC3D321282A045700655461 /* CategoryAPI */,
+				CBF947B0282B4D8A00120243 /* TransactionAPI */,
+				CBC3D31E282A03D200655461 /* ProductAPI */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CBF947B8282B56F300120243 /* NonAPI */ = {
+			isa = PBXGroup;
+			children = (
+				CB51D2E8282907DD0049E272 /* LogoutService.swift */,
+				CBC3D328282A0E3100655461 /* ImageService.swift */,
+				CBC3D331282A1F4000655461 /* AlertService.swift */,
+			);
+			path = NonAPI;
+			sourceTree = "<group>";
+		};
+		CBF947B9282B573200120243 /* APIReponse */ = {
+			isa = PBXGroup;
+			children = (
 				CB099C6A2827A32C0083B596 /* Product.swift */,
 				CB099C6E2827A5E90083B596 /* Transaction.swift */,
 				CB099C702827A6340083B596 /* Customer.swift */,
 				CB099C6C2827A5BD0083B596 /* Product_Ctg.swift */,
-				CB51D2E62828F5190049E272 /* Login.swift */,
+				CB51D2E62828F5190049E272 /* OtherResponse.swift */,
 			);
-			path = Model;
+			path = APIReponse;
+			sourceTree = "<group>";
+		};
+		CBF947BE282B5BE900120243 /* AdminTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				CB099C792827ABD40083B596 /* AdminTransactionViewController.swift */,
+				CBF947BC282B5BCF00120243 /* PeminjamanViewController.swift */,
+				CBF947BF282B5C0D00120243 /* DetailTransaksiViewController.swift */,
+			);
+			path = AdminTransaction;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,23 +500,39 @@
 				CB099C6F2827A5E90083B596 /* Transaction.swift in Sources */,
 				CB8538B7282744460039F650 /* LoginViewController.swift in Sources */,
 				CB51D2DF2828D6170049E272 /* AdminProductsTableViewCell.swift in Sources */,
-				CBB2D67D282753AF00962A04 /* ProductImage+CoreDataProperties.swift in Sources */,
 				CB099C742827A6CA0083B596 /* AllProductAPI.swift in Sources */,
+				CBF947BD282B5BCF00120243 /* PeminjamanViewController.swift in Sources */,
+				CBC3D32D282A0FF900655461 /* ProductImage+CoreDataProperties.swift in Sources */,
+				CBF947B6282B4EC000120243 /* APIRequest.swift in Sources */,
+				CBF801A9282A6E5D00DCC489 /* EditProductAPI.swift in Sources */,
 				CB099C6D2827A5BD0083B596 /* Product_Ctg.swift in Sources */,
 				CB099C6B2827A32C0083B596 /* Product.swift in Sources */,
+				CBC3D32C282A0FF900655461 /* ProductImage+CoreDataClass.swift in Sources */,
 				CB099C6928279A520083B596 /* CustomerCatalogueViewController.swift in Sources */,
+				CBC3D320282A043C00655461 /* GetAllCtgAPI.swift in Sources */,
+				CBF947B4282B4DDC00120243 /* PengembalianAPI.swift in Sources */,
 				CB51D2E12828DFF30049E272 /* APIProtocol.swift in Sources */,
-				CB51D2E72828F5190049E272 /* Login.swift in Sources */,
+				CBF947B2282B4DD100120243 /* PeminjamanAPI.swift in Sources */,
+				CB51D2E72828F5190049E272 /* OtherResponse.swift in Sources */,
+				CBC3D323282A058300655461 /* GetProductbyIdAPI.swift in Sources */,
 				CB099C782827AAB20083B596 /* LoginAPI.swift in Sources */,
-				CBB2D67C282753AF00962A04 /* ProductImage+CoreDataClass.swift in Sources */,
 				CB8538B3282744460039F650 /* AppDelegate.swift in Sources */,
 				CB099C712827A6340083B596 /* Customer.swift in Sources */,
+				CBC3D329282A0E3100655461 /* ImageService.swift in Sources */,
+				CBC3D31D282A03BE00655461 /* InsertProductAPI.swift in Sources */,
+				CBC3D325282A05A100655461 /* GetAllProductAPI.swift in Sources */,
+				CBF801A7282A305F00DCC489 /* PickerController.swift in Sources */,
 				CB51D2E52828ED620049E272 /* EditProductViewController.swift in Sources */,
+				CBC3D32F282A174300655461 /* ImagePickerController.swift in Sources */,
 				CB099C6728279A240083B596 /* AdminProductsViewController.swift in Sources */,
-				CB51D2EB282910320049E272 /* AllCategoryAPI.swift in Sources */,
+				CB51D2EB282910320049E272 /* CategoryAPI.swift in Sources */,
 				CB51D2E9282907DD0049E272 /* LogoutService.swift in Sources */,
 				CB8538BD282744460039F650 /* SertifikasiLibrary.xcdatamodeld in Sources */,
+				CBF801AB282A71E900DCC489 /* DeleteProductAPI.swift in Sources */,
+				CBF947C0282B5C0D00120243 /* DetailTransaksiViewController.swift in Sources */,
+				CBC3D332282A1F4000655461 /* AlertService.swift in Sources */,
 				CB070D7A2828B37D009BE15D /* ProductAPI.swift in Sources */,
+				CBF947AF282B4D8400120243 /* GetAllTransactionAPI.swift in Sources */,
 				CB099C7A2827ABD40083B596 /* AdminTransactionViewController.swift in Sources */,
 				CB51D2E32828E31E0049E272 /* NewProductViewController.swift in Sources */,
 				CB8538B5282744460039F650 /* SceneDelegate.swift in Sources */,

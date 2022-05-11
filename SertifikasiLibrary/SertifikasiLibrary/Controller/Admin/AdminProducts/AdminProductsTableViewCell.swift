@@ -25,10 +25,18 @@ class AdminProductsTableViewCell: UITableViewCell {
     }
     
     func setProduct(product: Product) {
-        ivGambar?.image = UIImage(named: "square.and.arrow.up")
+        self.productID = product.id_product
+        self.imageHandler()
         labelJudul?.text = product.product_name
         labelStatus?.text = product.available == "1" ? "Available" : "Unavailable"
         labelStatus?.textColor = product.available == "1" ? UIColor.green : UIColor.red
-        self.productID = product.id_product
+    }
+    
+    func imageHandler() {
+        let imageService = ImageService()
+        DispatchQueue.main.async {
+            let image = imageService.retrieveImage(productID: "\(self.productID)")
+            self.ivGambar?.image = UIImage(data: (image.image) ?? Data())
+        }
     }
 }

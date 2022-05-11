@@ -8,20 +8,48 @@
 import UIKit
 
 class NewProductViewController: UIViewController {
-    let allCategoryAPI = AllCategoryAPI.shared
+    let allCategoryAPI = CategoryAPI.shared
+    let productAPI = ProductAPI.shared
     var categories: [Int: String] = [:]
     var picker = UIPickerView()
-    var pickedCtg = 0
+    var pickedCtg: Int?
+    var productID: Int?
+    
+    // tutorial
+    var images = [ProductImage]()
 
     @IBOutlet weak var ivProductPic: UIImageView!
     @IBOutlet weak var ctgTF: UITextField!
+    @IBOutlet weak var judulTF: UITextField!
     
     @IBAction func btAddProductPic(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true)
     }
-    @IBAction func tfJudul(_ sender: Any) {
-    }
+    
     @IBAction func btSubmit(_ sender: Any) {
-        
+        // insert to mysql
+        productAPI.newProduct(idCtg: pickedCtg ?? 1, productName: judulTF.text ?? "") {
+            // completion block
+            self.productID = self.productAPI.productId
+            
+            // save image to coredata
+            if (self.productAPI.status ?? false){
+                DispatchQueue.main.async {
+                    let imageService = ImageService()
+                    let message = imageService.saveImage(image: self.ivProductPic.image ?? UIImage(), productId: String(self.productID ?? 0))
+                    self.showAlert(message: message)
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.showAlert(message: self.productAPI.message ?? "")
+                }
+            }
+            
+        }
     }
     
     override func viewDidLoad() {
@@ -35,24 +63,9 @@ class NewProductViewController: UIViewController {
         picker.dataSource = self
         ctgTF.inputView = picker
     }
-}
-
-extension NewProductViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return categories.count+1
-    }
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return categories[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        ctgTF.text = categories[row]
-        ctgTF.resignFirstResponder()
-        pickedCtg = row
+    private func showAlert(message: String) {
+        let alert = AlertService.shared.showAlert(message: message)
+        self.present(alert, animated: true)
     }
 }
