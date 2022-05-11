@@ -25,7 +25,6 @@ class AdminProductsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.fetchData()
     }
     
     override func viewWillAppear(_ animated: Bool) {

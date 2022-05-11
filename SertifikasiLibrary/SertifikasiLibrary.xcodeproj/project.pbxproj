@@ -25,6 +25,9 @@
 		CB51D2E72828F5190049E272 /* OtherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB51D2E62828F5190049E272 /* OtherResponse.swift */; };
 		CB51D2E9282907DD0049E272 /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB51D2E8282907DD0049E272 /* LogoutService.swift */; };
 		CB51D2EB282910320049E272 /* CategoryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB51D2EA282910320049E272 /* CategoryAPI.swift */; };
+		CB5D27A8282BA09600D77E78 /* CustomerViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D27A7282BA09600D77E78 /* CustomerViewTableViewCell.swift */; };
+		CB5D27AA282BA70600D77E78 /* AdminTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D27A9282BA70600D77E78 /* AdminTransactionTableViewCell.swift */; };
+		CB5D27AC282C148E00D77E78 /* PeminjamanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D27AB282C148E00D77E78 /* PeminjamanTableViewCell.swift */; };
 		CB8538B3282744460039F650 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8538B2282744460039F650 /* AppDelegate.swift */; };
 		CB8538B5282744460039F650 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8538B4282744460039F650 /* SceneDelegate.swift */; };
 		CB8538B7282744460039F650 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8538B6282744460039F650 /* LoginViewController.swift */; };
@@ -91,6 +94,9 @@
 		CB51D2E62828F5190049E272 /* OtherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherResponse.swift; sourceTree = "<group>"; };
 		CB51D2E8282907DD0049E272 /* LogoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutService.swift; sourceTree = "<group>"; };
 		CB51D2EA282910320049E272 /* CategoryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryAPI.swift; sourceTree = "<group>"; };
+		CB5D27A7282BA09600D77E78 /* CustomerViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerViewTableViewCell.swift; sourceTree = "<group>"; };
+		CB5D27A9282BA70600D77E78 /* AdminTransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTransactionTableViewCell.swift; sourceTree = "<group>"; };
+		CB5D27AB282C148E00D77E78 /* PeminjamanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeminjamanTableViewCell.swift; sourceTree = "<group>"; };
 		CB8538AF282744460039F650 /* SertifikasiLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SertifikasiLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8538B2282744460039F650 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB8538B4282744460039F650 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +196,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		CB5D27A6282B9FE900D77E78 /* CustomerCatalogue */ = {
+			isa = PBXGroup;
+			children = (
+				CB099C6828279A520083B596 /* CustomerCatalogueViewController.swift */,
+				CB5D27A7282BA09600D77E78 /* CustomerViewTableViewCell.swift */,
+			);
+			path = CustomerCatalogue;
+			sourceTree = "<group>";
+		};
 		CB8538A6282744460039F650 = {
 			isa = PBXGroup;
 			children = (
@@ -256,7 +271,7 @@
 			children = (
 				CB8538B6282744460039F650 /* LoginViewController.swift */,
 				CB070D842828BE9D009BE15D /* Admin */,
-				CB099C6828279A520083B596 /* CustomerCatalogueViewController.swift */,
+				CB5D27A6282B9FE900D77E78 /* CustomerCatalogue */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -361,7 +376,9 @@
 			children = (
 				CB099C792827ABD40083B596 /* AdminTransactionViewController.swift */,
 				CBF947BC282B5BCF00120243 /* PeminjamanViewController.swift */,
+				CB5D27AB282C148E00D77E78 /* PeminjamanTableViewCell.swift */,
 				CBF947BF282B5C0D00120243 /* DetailTransaksiViewController.swift */,
+				CB5D27A9282BA70600D77E78 /* AdminTransactionTableViewCell.swift */,
 			);
 			path = AdminTransaction;
 			sourceTree = "<group>";
@@ -531,8 +548,11 @@
 				CBF801AB282A71E900DCC489 /* DeleteProductAPI.swift in Sources */,
 				CBF947C0282B5C0D00120243 /* DetailTransaksiViewController.swift in Sources */,
 				CBC3D332282A1F4000655461 /* AlertService.swift in Sources */,
+				CB5D27AA282BA70600D77E78 /* AdminTransactionTableViewCell.swift in Sources */,
 				CB070D7A2828B37D009BE15D /* ProductAPI.swift in Sources */,
+				CB5D27AC282C148E00D77E78 /* PeminjamanTableViewCell.swift in Sources */,
 				CBF947AF282B4D8400120243 /* GetAllTransactionAPI.swift in Sources */,
+				CB5D27A8282BA09600D77E78 /* CustomerViewTableViewCell.swift in Sources */,
 				CB099C7A2827ABD40083B596 /* AdminTransactionViewController.swift in Sources */,
 				CB51D2E32828E31E0049E272 /* NewProductViewController.swift in Sources */,
 				CB8538B5282744460039F650 /* SceneDelegate.swift in Sources */,

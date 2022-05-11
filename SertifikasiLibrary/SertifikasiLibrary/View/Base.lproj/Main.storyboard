@@ -91,11 +91,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CZX-51-rYo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CZX-51-rYo">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="100" id="Hq3-5w-aIi">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="catalogueCell" rowHeight="100" id="Hq3-5w-aIi" customClass="CustomerViewTableViewCell" customModule="SertifikasiLibrary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hq3-5w-aIi" id="B4m-dT-uqk">
@@ -133,6 +133,11 @@
                                                 <constraint firstAttribute="bottom" secondItem="n6q-7Q-K41" secondAttribute="bottom" id="uZE-0T-Jcz"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ivProductPicture" destination="n6q-7Q-K41" id="jmJ-7z-UpY"/>
+                                            <outlet property="lbJudul" destination="gyu-dW-eJV" id="Uy9-lt-F9n"/>
+                                            <outlet property="lbStatus" destination="c7H-sH-Tqd" id="P8X-3U-NsM"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -486,9 +491,65 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="neN-Jw-TCf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="neN-Jw-TCf">
                                 <rect key="frame" x="0.0" y="200" width="414" height="613"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="transactionCell" id="3jI-6O-WWX" customClass="AdminTransactionTableViewCell" customModule="SertifikasiLibrary" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3jI-6O-WWX" id="FJA-0B-ueS">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Judul" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGY-Ds-XFb">
+                                                    <rect key="frame" x="30" y="16" width="354" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tanggal Pinjam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94I-0a-Nfs">
+                                                    <rect key="frame" x="30" y="35.5" width="354" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fk6-tk-bST">
+                                                    <rect key="frame" x="30" y="55" width="354" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tanggal Kembali" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WjK-Y0-ggx">
+                                                    <rect key="frame" x="30" y="74.5" width="354" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="94I-0a-Nfs" firstAttribute="leading" secondItem="FJA-0B-ueS" secondAttribute="leadingMargin" constant="10" id="1as-oY-KON"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fk6-tk-bST" secondAttribute="trailing" constant="10" id="355-5k-xvC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="kGY-Ds-XFb" secondAttribute="trailing" constant="10" id="4v7-DI-KfK"/>
+                                                <constraint firstItem="94I-0a-Nfs" firstAttribute="top" secondItem="kGY-Ds-XFb" secondAttribute="bottom" constant="5" id="5Vr-O6-mwq"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="94I-0a-Nfs" secondAttribute="trailing" constant="10" id="7UD-TN-hQa"/>
+                                                <constraint firstItem="kGY-Ds-XFb" firstAttribute="top" secondItem="FJA-0B-ueS" secondAttribute="topMargin" constant="5" id="OCo-ME-wfw"/>
+                                                <constraint firstItem="WjK-Y0-ggx" firstAttribute="top" secondItem="fk6-tk-bST" secondAttribute="bottom" constant="5" id="PSQ-P9-GTd"/>
+                                                <constraint firstItem="fk6-tk-bST" firstAttribute="leading" secondItem="FJA-0B-ueS" secondAttribute="leadingMargin" constant="10" id="Uuo-A5-Gj3"/>
+                                                <constraint firstItem="fk6-tk-bST" firstAttribute="top" secondItem="94I-0a-Nfs" secondAttribute="bottom" constant="5" id="Xmp-4u-iqU"/>
+                                                <constraint firstItem="kGY-Ds-XFb" firstAttribute="leading" secondItem="FJA-0B-ueS" secondAttribute="leadingMargin" constant="10" id="cND-a1-bg4"/>
+                                                <constraint firstItem="WjK-Y0-ggx" firstAttribute="leading" secondItem="FJA-0B-ueS" secondAttribute="leadingMargin" constant="10" id="gxn-AP-kqB"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="WjK-Y0-ggx" secondAttribute="trailing" constant="10" id="xR2-Dq-4Z2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lbBorrowDate" destination="94I-0a-Nfs" id="yXj-CP-bLe"/>
+                                            <outlet property="lbDeadline" destination="fk6-tk-bST" id="Huq-gQ-HVz"/>
+                                            <outlet property="lbJudul" destination="kGY-Ds-XFb" id="J8T-Q5-9wM"/>
+                                            <outlet property="lbReturnDate" destination="WjK-Y0-ggx" id="hH2-ra-CdG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4lj-ea-K8Z"/>
@@ -515,7 +576,8 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <segue destination="Uqx-dy-GH9" kind="show" id="xdM-oY-w5y"/>
+                        <outlet property="tvTransaction" destination="neN-Jw-TCf" id="nvJ-yC-MU5"/>
+                        <segue destination="Uqx-dy-GH9" kind="show" identifier="transactionDetail" id="xdM-oY-w5y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mrj-P4-Asd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -592,7 +654,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="borrowProduct" rowHeight="100" id="CVY-b9-vne">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="borrowProduct" rowHeight="100" id="CVY-b9-vne" customClass="PeminjamanTableViewCell" customModule="SertifikasiLibrary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CVY-b9-vne" id="fcF-gr-HIQ">
@@ -631,6 +693,11 @@
                                                 <constraint firstAttribute="bottom" secondItem="kFu-qu-IGg" secondAttribute="bottom" id="wcY-g5-LcM"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ivProduct" destination="kFu-qu-IGg" id="HVR-Vv-BQn"/>
+                                            <outlet property="tvJudul" destination="lGW-g3-qvv" id="v2e-ow-5Tx"/>
+                                            <outlet property="tvStatus" destination="ToC-oZ-REw" id="rQC-vk-BWj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -645,6 +712,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pick a Product to Borrow" id="j1V-2i-kM5"/>
+                    <connections>
+                        <outlet property="tvProduct" destination="Qor-0F-ahF" id="m7t-rI-Vzw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lJY-KM-1Wa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -711,6 +781,9 @@
                                 <rect key="frame" x="146" y="589" width="122" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Return Product"/>
+                                <connections>
+                                    <action selector="btReturn:" destination="Uqx-dy-GH9" eventType="touchUpInside" id="YUW-jJ-1tH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qoP-xD-xYA"/>
@@ -741,6 +814,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Transaction Detail" id="ljF-Iw-cDi"/>
+                    <connections>
+                        <outlet property="btReturnOutlet" destination="BxT-fn-hMy" id="yas-uD-Xtv"/>
+                        <outlet property="ivProduct" destination="iSY-do-jnC" id="QWb-uj-EZc"/>
+                        <outlet property="lbBorrowDate" destination="h69-fA-5Tm" id="tkc-79-Xex"/>
+                        <outlet property="lbDeadline" destination="o1D-Yl-Dq2" id="mRZ-G1-U1n"/>
+                        <outlet property="lbJudul" destination="1yC-oB-dGP" id="5Rm-2M-mjF"/>
+                        <outlet property="lbReturnDate" destination="3xa-YB-Qa6" id="YzP-Id-ebs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S5V-hB-2rr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

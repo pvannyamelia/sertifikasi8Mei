@@ -8,9 +8,12 @@
 import Foundation
 
 class TransactionAPI: APIProtocol {
+    static var shared = TransactionAPI()
+    
     // API response vars
     var status: Bool?
     var message: String?
+    var transactionArray = [Transaction]()
     
     let getAllTransactionURL: String
     let peminjamanURL: String

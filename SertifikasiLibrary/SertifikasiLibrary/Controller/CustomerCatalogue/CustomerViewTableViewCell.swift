@@ -1,16 +1,16 @@
 //
-//  AdminProductsTableViewCell.swift
+//  CustomerViewTableViewCell.swift
 //  SertifikasiLibrary
 //
-//  Created by Priscilla Vanny Amelia on 09/05/22.
+//  Created by Priscilla Vanny Amelia on 11/05/22.
 //
 
 import UIKit
 
-class AdminProductsTableViewCell: UITableViewCell {
-    @IBOutlet weak var ivGambar: UIImageView?
-    @IBOutlet weak var labelJudul: UILabel?
-    @IBOutlet weak var labelStatus: UILabel?
+class CustomerViewTableViewCell: UITableViewCell {
+    @IBOutlet weak var ivProductPicture: UIImageView!
+    @IBOutlet weak var lbJudul: UILabel!
+    @IBOutlet weak var lbStatus: UILabel!
     var productID: String = ""
     
     override func awakeFromNib() {
@@ -23,20 +23,20 @@ class AdminProductsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     func setProduct(product: Product) {
         self.productID = product.id_product
         self.imageHandler()
-        self.labelJudul?.text = product.product_name
-        self.labelStatus?.text = product.available == "1" ? "Available" : "Unavailable"
-        self.labelStatus?.textColor = product.available == "1" ? UIColor.green : UIColor.red
+        self.lbJudul?.text = product.product_name
+        self.lbStatus?.text = product.available == "1" ? "Available" : "Unavailable"
+        self.lbStatus?.textColor = product.available == "1" ? UIColor.green : UIColor.red
     }
     
-    func imageHandler() {
+    private func imageHandler() {
         let imageService = ImageService()
         DispatchQueue.main.async {
             let image = imageService.retrieveImage(productID: "\(self.productID)")
-            self.ivGambar?.image = UIImage(data: (image.image) ?? Data())
+            self.ivProductPicture?.image = UIImage(data: (image.image) ?? Data())
         }
     }
 }

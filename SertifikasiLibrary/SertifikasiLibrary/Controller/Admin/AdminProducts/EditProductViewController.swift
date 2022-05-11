@@ -35,9 +35,9 @@ class EditProductViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Proceed", style: .destructive, handler: { action in
             self.productAPI.deleteProduct(productID: self.productID ?? "0") {
                 DispatchQueue.main.async {
-                let alert = AlertService.shared.showAlert(message: self.productAPI.message ?? "Failed to retrieve message")
-                self.present(alert, animated: true)
-                self.dismiss(animated: true)
+                    let alert = AlertService.shared.showAlert(message: self.productAPI.message ?? "Failed to retrieve message")
+                    self.present(alert, animated: true)
+                    self.dismiss(animated: true)
                 }
             }
         }))
