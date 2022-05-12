@@ -1,7 +1,7 @@
 <?php
 include '../../template/dbConnect.php';
 
-$sql = "SELECT * FROM `Product`";
+$sql = "SELECT p.product_name, t.id_transaction, t.id_product, t.borrow_date, t.deadline, t.return_date FROM `Product` as p, `Transaction` as t WHERE t.id_product = p.id_product";
 
 if ($result = mysqli_query($con, $sql))
 {

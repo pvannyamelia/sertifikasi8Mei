@@ -13,8 +13,7 @@ if ($result = mysqli_query($con, $sql))
 
         $today = date('d-m-Y');
         $nextWeek = date("d-m-Y", strtotime("+1 week"));
-        $sql = "INSERT INTO `Transaction` (id_product, id_user, borrow_date, deadline) VALUE (".$_POST['id_product'].", ".$_POST['id_user'].", '".$today."', '".$nextWeek."')";
-        echo $sql;
+        $sql = "INSERT INTO `Transaction` (id_product, borrow_date, deadline) VALUE (".$_POST['id_product'].", '".$today."', '".$nextWeek."')";
         mysqli_query($con, $sql);
         
         if($con->affected_rows == 1) {

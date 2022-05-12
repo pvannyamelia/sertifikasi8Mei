@@ -45,7 +45,7 @@ class NewProductViewController: UIViewController {
                 }
             } else {
                 DispatchQueue.main.async {
-                    self.showAlert(message: self.productAPI.message ?? "")
+                    self.showAlert(message: self.productAPI.message ?? "Failed to retrieve message")
                 }
             }
             

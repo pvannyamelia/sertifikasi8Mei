@@ -45,14 +45,19 @@ class EditProductViewController: UIViewController {
     }
     
     @IBAction func btSave(_ sender: Any) {
-        let product = Product(id_product: productID ?? "0", id_ctg: "\(pickedCtg ?? 1)", product_name: judulTF.text ?? "Error while fetching name", available: self.productAPI.product?.available ?? "0")
-        productAPI.editProduct(product: product) {
-            DispatchQueue.main.async {
-                let message = self.imageService.updateImage(productID: self.productID ?? "0", image: self.ivProductImage.image ?? UIImage())
-                
-                let alert = AlertService.shared.showAlert(message: message)
-                self.present(alert, animated: true)
+        if((judulTF.text != self.productAPI.product?.product_name) || (pickedCtg != Int(self.productAPI.product?.id_ctg ?? "0"))) {
+            let product = Product(id_product: productID ?? "0", id_ctg: "\(pickedCtg ?? 1)", product_name: judulTF.text ?? "Error while fetching name", available: self.productAPI.product?.available ?? "0")
+            productAPI.editProduct(product: product) {
+                if (self.productAPI.status ?? false){
+                    self.updateImage()
+                } else {
+                    DispatchQueue.main.async {
+                        self.showAlert(message: self.productAPI.message ?? "Failed to retrieve message")
+                    }
+                }
             }
+        } else {
+            self.updateImage()
         }
     }
     
@@ -73,13 +78,25 @@ class EditProductViewController: UIViewController {
     }
     
     private func inputDatatoView(){
-        let picked_ctg = Int(self.productAPI.product!.id_ctg)!
+        let picked_ctg = Int(self.productAPI.product?.id_ctg ?? "0")
         DispatchQueue.main.async {
             self.image = self.imageService.retrieveImage(productID: self.productID ?? "0")
             self.ivProductImage.image = UIImage(data: (self.image?.image) ?? Data())
             self.judulTF.text = self.productAPI.product?.product_name
-            self.picker.selectRow(picked_ctg, inComponent: 0, animated: true)
-            self.pickerView(self.picker, didSelectRow: picked_ctg, inComponent: 0)
+            self.picker.selectRow(picked_ctg ?? 0, inComponent: 0, animated: true)
+            self.pickerView(self.picker, didSelectRow: picked_ctg ?? 0, inComponent: 0)
+        }
+    }
+    
+    private func showAlert(message: String) {
+        let alert = AlertService.shared.showAlert(message: message)
+        self.present(alert, animated: true)
+    }
+    
+    private func updateImage() {
+        DispatchQueue.main.async {
+            let message = self.imageService.updateImage(productID: self.productID ?? "0", image: self.ivProductImage.image ?? UIImage())
+            self.showAlert(message: message)
         }
     }
 }

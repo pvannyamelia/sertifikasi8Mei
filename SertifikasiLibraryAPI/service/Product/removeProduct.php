@@ -2,7 +2,6 @@
 include '../../template/dbConnect.php';
 
 $sql = "DELETE FROM Product WHERE id_product=".$_GET['product'];
-echo $sql;
 if ($result = mysqli_query($con, $sql))
 {
     if($con->affected_rows == 1) {

@@ -8,9 +8,9 @@ if(empty(trim($_POST['id_ctg'])) || empty(trim($_POST['product_name']))){
     if ($result = mysqli_query($con, $sql))
     {
         if($con->affected_rows == 1) {
-            $response = array( "status" => "200", "message" => "Product added!");
+            $response = array( "status" => "200", "message" => "Product added!", "product_id" => mysqli_insert_id($con));
         } else {
-            $response = array( "status" => "400", "message" => "Failed to add product, try again.");
+            $response = array( "status" => "400", "message" => "Failed to add product, try again.", "product_id" => "");
         }
     }
 }

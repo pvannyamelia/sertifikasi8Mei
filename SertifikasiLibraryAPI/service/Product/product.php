@@ -1,7 +1,7 @@
 <?php
 include '../../template/dbConnect.php';
 
-$sql = "SELECT * FROM Product WHERE id_product=".$_GET['product'];
+$sql = "SELECT * FROM Product WHERE id_product=".$_GET['id_product'];
 if ($result = mysqli_query($con, $sql))
 {
     // Create a results array and a temporary one

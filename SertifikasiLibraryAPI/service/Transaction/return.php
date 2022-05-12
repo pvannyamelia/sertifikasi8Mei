@@ -12,7 +12,7 @@ mysqli_query($con, $sql);
 if($con->affected_rows == 1) {
     $response = array( "status" => "200", "message" => "Product return succeed!");
 } else {
-    $response = array( "status" => "400", "message" => "Failed to create return request, try again.");
+    $response = array( "status" => "400", "message" => "Failed while running return request, try again.");
 }
 echo json_encode($response);
 

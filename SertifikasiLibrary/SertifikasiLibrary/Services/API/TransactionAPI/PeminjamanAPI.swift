@@ -14,9 +14,7 @@ extension TransactionAPI {
         
         // hit request
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-//            if let data = data, let dataString = String(data: data, encoding: .utf8) {
-//                print(dataString)
-//            }
+
             guard let data=data, error == nil else {
                 return
             }

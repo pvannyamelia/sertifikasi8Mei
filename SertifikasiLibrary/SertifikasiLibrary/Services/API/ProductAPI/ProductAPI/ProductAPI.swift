@@ -44,7 +44,7 @@ class ProductAPI: APIProtocol {
     
     func parseJSON(data: Data) {
         let response: DefaultResponse = try! JSONDecoder().decode(DefaultResponse.self, from: data)
-        self.status = response.status == "200" ? true : false
+        self.status = (response.status == "200") ? true : false
         self.message = response.message
     }
 }
